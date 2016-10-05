@@ -52,7 +52,7 @@ class OfferApiController extends Controller
      */
     public function show($id)
     {
-        //
+        return Offer::findOrFail( $id );
     }
 
     /**
@@ -86,6 +86,13 @@ class OfferApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $result = Offer::findOrFail($id)->delete();
+            return \Response::json("", 200);
+        } catch (\Exception $e){
+            return \Response::json([
+                "error" => "Offer doesn`t exists"
+            ], 404);
+        }
     }
 }
