@@ -17,7 +17,3 @@ Route::group(array('domain' => 'api.rondcoin.ovh'), function(){
 
     Route::resource('offer', 'OfferApiController');
 });
-#->middleware('auth:api');
-#Route::get('/user', function (Request $request) {
-#    return $request->user();
-#});

@@ -10,13 +10,14 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::group( array( 'domain' => 'rondcoin.ovh'), function(){
+  Route::get('/', function () {
+      return redirect('/offer');
+  });
 
-Route::get('/', function () {
-    return redirect('/offer');
+  Auth::routes();
+
+  Route::get('/home', 'HomeController@index');
+  Route::get('/tokens', 'HomeController@tokens');
+  Route::resource('offer', 'OfferController');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-Route::get('/tokens', 'HomeController@tokens');
-Route::resource('offer', 'OfferController');
