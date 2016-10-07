@@ -57,8 +57,8 @@ return [
     |
     */
 
-    'files' => storage_path('framework/sessions'),
-
+    'files' => '/tmp',
+    
     /*
     |--------------------------------------------------------------------------
     | Session Database Connection
