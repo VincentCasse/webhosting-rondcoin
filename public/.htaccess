@@ -18,3 +18,13 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
+
+# Cache des images durant 1 mois
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+# Cache des javascript et CSS durant 1 mois
+<FilesMatch "\.(js|css)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
