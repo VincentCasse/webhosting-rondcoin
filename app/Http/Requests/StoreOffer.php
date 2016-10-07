@@ -27,6 +27,7 @@ class StoreOffer extends FormRequest
           'title' => 'required|max:255',
           'text'  => 'required',
           'price' => 'required',
+          'photo' => 'required',
         ];
     }
 }

@@ -13,7 +13,7 @@ use Laravel\Passport\Passport;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::group(array('domain' => 'api.immo.app'), function(){
+Route::group(array('domain' => 'api.rondcoin.ovh'), function(){
 
     Route::resource('offer', 'OfferApiController');
 });
