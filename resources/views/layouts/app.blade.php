@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="http://assets.rondcoin.ovh/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -84,6 +84,6 @@
     @yield('content')
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="http://assets.rondcoin.ovh/js/app.js"></script>
 </body>
 </html>
