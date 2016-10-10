@@ -21,10 +21,10 @@
 
 # Cache des images durant 1 mois
 <FilesMatch "\.(jpg|jpeg|png|gif)$">
-Header set Cache-Control "max-age=604800, public"
+Header set Cache-Control "max-age=2592000, public"
 </FilesMatch>
 
 # Cache des javascript et CSS durant 1 mois
 <FilesMatch "\.(js|css)$">
-Header set Cache-Control "max-age=2592000"
+Header set Cache-Control "max-age=2592000, public"
 </FilesMatch>
